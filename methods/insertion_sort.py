@@ -1,7 +1,10 @@
+from datetime import datetime
+
+
 def insertion_sort(array):
     moves = 0
     compare = 0
-    time = 0
+    time = datetime.now()
 
     for i in range(1, len(array)):
         moves += 1
@@ -17,4 +20,5 @@ def insertion_sort(array):
         array[j + 1] = key
         moves += 1
 
+    time = datetime.now() - time
     return [moves, compare, time]

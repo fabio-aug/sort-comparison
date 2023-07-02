@@ -40,7 +40,7 @@ def calculate_selection(size):
 
 
 if __name__ == '__main__':
-    array_tests_sizes = [10, 100, 1000]
+    array_tests_sizes = [100, 1000, 100000]
 
     for i in range(len(array_tests_sizes)):
         length = array_tests_sizes[i]

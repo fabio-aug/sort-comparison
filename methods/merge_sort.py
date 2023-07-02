@@ -1,12 +1,12 @@
+from datetime import datetime
+
 moves = 0
 compare = 0
-time = 0
 
 
 def merge(array, left, mid, right):
     global moves
     global compare
-    global time
 
     left_size = mid - left + 1
     right_size = right - mid
@@ -65,12 +65,12 @@ def sort(array, left, right):
 def merge_sort(array):
     global moves
     global compare
-    global time
 
     moves = 0
     compare = 0
-    time = 0
+    time = datetime.now()
 
     sort(array, 0, len(array) - 1)
 
+    time = datetime.now() - time
     return [moves, compare, time]

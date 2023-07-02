@@ -1,7 +1,10 @@
+from datetime import datetime
+
+
 def selection_sort(array):
     moves = 0
     compare = 0
-    time = 0
+    time = datetime.now()
 
     for step in range(len(array)):
         moves += 1
@@ -15,4 +18,5 @@ def selection_sort(array):
         moves += 2
         (array[step], array[min_idx]) = (array[min_idx], array[step])
 
+    time = datetime.now() - time
     return [moves, compare, time]
