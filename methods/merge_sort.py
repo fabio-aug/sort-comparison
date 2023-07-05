@@ -26,6 +26,7 @@ def merge(array, left, mid, right):
     j = 0
     k = left
 
+    compare += 1
     while i < left_size and j < right_size:
         compare += 2
         if left_array[i] <= right_array[j]:
@@ -38,6 +39,7 @@ def merge(array, left, mid, right):
             j += 1
         k += 1
 
+    compare += 1
     while i < left_size:
         compare += 1
         moves += 1
@@ -45,6 +47,7 @@ def merge(array, left, mid, right):
         i += 1
         k += 1
 
+    compare += 1
     while j < right_size:
         compare += 1
         moves += 1
@@ -54,6 +57,8 @@ def merge(array, left, mid, right):
 
 
 def sort(array, left, right):
+    global compare
+    compare += 1
     if left < right:
         mid = left + (right - left) // 2
 

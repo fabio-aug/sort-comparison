@@ -11,6 +11,7 @@ def insertion_sort(array):
         key = array[i]
         j = i - 1
 
+        compare += 1
         while j >= 0 and key < array[j]:
             compare += 1
             moves += 1
